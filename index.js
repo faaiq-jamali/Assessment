@@ -11,6 +11,7 @@ const io = require('socket.io')(server, {
   });
 const cors = require('cors');
 const port = process.env.PORT || 5000;
+require('dotenv').config()
 
 server.listen(port, () => {
   console.log('Server listening at port %d', port);
