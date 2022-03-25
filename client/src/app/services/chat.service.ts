@@ -8,7 +8,7 @@ import { Message } from '../models/message';
   providedIn: 'root',
 })
 export class ChatService {
-  private readonly api: string = 'http://localhost:5000/api';
+  private readonly api: string = 'http://52.15.194.62:5000/api';
   constructor(private http: HttpClient, private socket: Socket) {}
 
   register(name: string): Observable<Object> {
