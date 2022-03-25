@@ -1,0 +1,16 @@
+
+<nb-card size="large" class="main-div">
+    <nb-card-body>
+        <div class = "form">
+        <nb-form-field>
+            <input type="text" nbInput [(ngModel)]="nameInput" placeholder="Enter Your Name to start" class="nameField">
+            <p>{{errorMessage}}</p>
+            <button nbButton class="chat-button" shape="semi-round" status="primary" (click)="submitForm()" [disabled]=isButtonDisabled()>
+                Start Chatting
+            </button>
+        </nb-form-field>
+        
+        
+    </div>
+    </nb-card-body>
+  </nb-card>

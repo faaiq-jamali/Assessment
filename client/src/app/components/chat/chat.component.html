@@ -1,0 +1,11 @@
+
+<nb-chat title="ChatRoom" size="large" [scrollBottom]="true" class="main-div">
+    <nb-chat-message *ngFor="let msg of messages"
+                     [message]="msg.text"
+                     [sender]="msg.userName"
+                     >
+</nb-chat-message>
+
+<nb-chat-form (send)="sendMessage($event)">
+</nb-chat-form>
+</nb-chat>
