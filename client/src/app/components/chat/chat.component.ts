@@ -9,13 +9,20 @@ import { ChatService } from 'src/app/services/chat.service';
 })
 export class ChatComponent implements OnInit {
   messages: any[] = [];
+  welcomeMessage: string = ""
   constructor(private chatService: ChatService) {}
 
   ngOnInit(): void {
-    // 
+    let userName
+    let localStorageData = localStorage.getItem('user');
+    if (localStorageData) {
+      userName = JSON.parse(localStorageData).userName;
+      this.welcomeMessage = `Logged in as: ${userName}`
+    }
     this.chatService.getMessages().subscribe((data) => {
       this.messages.push(data);
     });
+  
   }
 
   // this functoin will send Message to DB first and then emit the socket to update all live screens
