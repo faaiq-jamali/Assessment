@@ -4,7 +4,7 @@ const path = require('path');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
     cors: {
-      origin: "http://localhost:4200",
+      origin: "http://52.15.194.62",
       methods: ["GET", "POST"],
       credentials: true
     }
@@ -17,7 +17,7 @@ server.listen(port, () => {
 });
 // Routing
 app.use(cors({
-  origin: 'http://localhost:4200'
+  origin: 'http://52.15.194.62'
 }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));

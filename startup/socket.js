@@ -4,8 +4,6 @@ module.exports = function(io){
 // Chatroom
 
 
-let numUsers = 0;
-
 io.on('connection', (socket) => {
 
     // when the client emits 'new message', this listens and executes
